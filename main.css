@@ -1,0 +1,42 @@
+body {
+    font-family: Lato;
+    background-color: #FFC107;
+}
+
+.container {
+    padding: 80px 120px;
+}
+
+.navbar {
+    font-family: Montserrat;
+    background-color: #FF9800;
+    letter-spacing: 4px;
+    opacity: 0.9;
+}
+
+.navbar li a,
+.navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover,
+.navbar .navbar-brand:hover {
+    opacity: 0.7;
+}
+
+.dropdown-menu li a {
+    color: #000 !important;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #FF5722 !important;
+}
+
+.carousel-inner img {
+    width: 100%;
+    margin: auto;
+}
+
+.carousel-caption h3 {
+    color: #fff !important;
+}
