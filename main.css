@@ -3,6 +3,10 @@ body {
     background-color: #FFC107;
 }
 
+p {
+    color: white;
+}
+
 .container {
     padding: 80px 120px;
 }

@@ -46,12 +46,50 @@
     </nav>
 
     <div class="container">
-        <form>
-            <input type="text" id="recipe-submit">
-            <button>Submit</button>
-        </form>
-    </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <p id="ingredients"></p>
+                <input type="text" id="ingredient-form">
+                <button onclick="submitIngredients(event)">Add Ingredient</button>
+            </div>
+            <div class="col-sm-6">
+                <p id="instructions"></p>
+                <input type="text" id="instruction-form">
+                <button onclick="submitInstructions(event)">Add Instruction</button>
+            </div>
+        </div>
 
 </body>
+
+<script>
+    var ingredients = [];
+    var instructions = [];
+
+    function submitIngredients(event) {
+        ingredients.push(document.getElementById("ingredient-form").value);
+        let inner = "<ul>";
+        for (let i = 0; i < ingredients.length; i++) {
+            inner += "<li>" + ingredients[i] + "</li>";
+        }
+        inner += "</ul>";
+        document.getElementById("ingredients").innerHTML = inner;
+        event.preventDefault();
+    }
+
+    function submitInstructions(event) {
+        instructions.push(document.getElementById("instruction-form").value);
+        let inner = "<ol>";
+        for (let i = 0; i < instructions.length; i++) {
+            inner += "<li>" + instructions[i] + "</li>";
+        }
+        inner += "</ol>";
+        document.getElementById("instructions").innerHTML = inner;
+        event.preventDefault();
+    }
+
+    function random(event) {
+
+    }
+</script>
 
 </html>
