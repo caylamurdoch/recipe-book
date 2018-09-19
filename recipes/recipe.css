@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'ingredients instructions';
+}
+
+.header {
+    grid-area: header;
+}
+
+.ingredients {
+    grid-area: ingredients;
+}
+
+.instructions {
+    grid-area: instructions;
+}
+
+/*
+Put classes where you want to identify an area.
+*/
