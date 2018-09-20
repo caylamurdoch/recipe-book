@@ -45,19 +45,25 @@
         </div>
     </nav>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <p id="ingredients"></p>
-                <input type="text" id="ingredient-form">
-                <button onclick="submitIngredients(event)">Add Ingredient</button>
-            </div>
-            <div class="col-sm-6">
-                <p id="instructions"></p>
-                <input type="text" id="instruction-form">
-                <button onclick="submitInstructions(event)">Add Instruction</button>
+    <div class="bg-1">
+        <div class="container">
+            <div class="row bg-2">
+                <div class="col-sm-6 bg-2">
+                    <p id="ingredients"></p>
+                    <input type="text" id="ingredient-form">
+                    <button onclick="submitIngredients(event)">Add Ingredient</button>
+                </div>
+                <div class="col-sm-6 bg-2">
+                    <p id="instructions"></p>
+                    <input type="text" id="instruction-form">
+                    <button onclick="submitInstructions(event)">Add Instruction</button>
+                </div>
             </div>
         </div>
+        <div class="btn-container">
+            <button class="btn" onclick="submitRecipe(event)">Submit Recipe</button>
+        </div>
+    </div>
 
 </body>
 
@@ -87,8 +93,14 @@
         event.preventDefault();
     }
 
-    function random(event) {
-
+    function submitRecipe(event) {
+        ingredients = [];
+        instructions = [];
+        document.getElementById("ingredients").innerHTML = "";
+        document.getElementById("instructions").innerHTML = "";
+        document.getElementById("ingredient-form").value = "";
+        document.getElementById("instruction-form").value = "";
+        alert("Recipe has been submitted!");
     }
 </script>
 
