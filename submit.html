@@ -50,6 +50,14 @@
     <div class="bg-1">
         <div class="container">
             <div class="row bg-2">
+                <h1 class="text-center">SUBMIT YOUR OWN RECIPE!</h1>
+                <div class="col-sm-12 bg-2">
+                    <p id="name"></p>
+                    <input type="text" id="name-form" placeholder="Give your recipe a name">
+                    <button onclick="submitName(event)">Add Name</button>
+                </div>
+            </div>
+            <div class="row bg-2">
                 <div class="col-sm-6 bg-2">
                     <p id="ingredients"></p>
                     <input type="text" id="ingredient-form">
@@ -74,6 +82,11 @@
 <script>
     var ingredients = [];
     var instructions = [];
+
+    function submitName(event) {
+        document.getElementById("name").innerHTML = document.getElementById("name-form").value;
+        event.preventDefault();
+    }
 
     function submitIngredients(event) {
         ingredients.push(document.getElementById("ingredient-form").value);
@@ -100,11 +113,13 @@
     function submitRecipe(event) {
         ingredients = [];
         instructions = [];
+        document.getElementById("name").innerHTML = "";
         document.getElementById("ingredients").innerHTML = "";
         document.getElementById("instructions").innerHTML = "";
+        document.getElementById("name-form").value = "";
         document.getElementById("ingredient-form").value = "";
         document.getElementById("instruction-form").value = "";
-        alert("Recipe has been submitted!");
+        alert("Your recipe has been submitted!");
     }
 </script>
 
