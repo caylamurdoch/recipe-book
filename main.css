@@ -97,8 +97,8 @@ h1 {
     grid-template-areas:
         "nav nav nav"
         "ing inst inst";
-    grid-template-columns: 250px 1fr;
-    grid-template-rows: 
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: auto;
     font-family: Baskerville;
 }
 
@@ -108,6 +108,7 @@ nav {
 
 .ingredients {
     grid-area: ing;
+    max-width: 400px;
     margin-top: -20px; /* To counteract the bootstrap 20px navbar margin. */
     margin-right: 20px;
     padding-right: 20px;
@@ -115,6 +116,13 @@ nav {
     border-style: solid;
     border-top-width: 0px;
     border-left-width: 0px;
+    font-size: 20px;
+}
+
+.instructions {
+    grid-area: inst;
+    margin-top: -20px;
+    font-size: 20px;
 }
 
 .center {
@@ -126,6 +134,3 @@ nav {
 }
 
 
-.instruction {
-    grid-area: inst;
-}
