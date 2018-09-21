@@ -1,17 +1,19 @@
-body {
+#myPage {
     margin: 0;
+    width: 100%;
     display: grid;
     grid-template-areas:
-        'header header'
+        'nav nav'
         'ingredients instructions';
+    grid-template-rows: 50px;
+    grid-template-columns: 150px;
 }
 
-.header {
-    grid-area: header;
-}
 
 .ingredients {
     grid-area: ingredients;
+    background-color: white;
+    width: 20%;
 }
 
 .instructions {
