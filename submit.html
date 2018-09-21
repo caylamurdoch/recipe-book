@@ -116,13 +116,13 @@
     function submitRecipe(event) {
         ingredients = [];
         instructions = [];
+        alert("Your recipe \'" + document.getElementById("name").innerHTML + "\' has been submitted!");
         document.getElementById("name").innerHTML = "";
         document.getElementById("ingredients").innerHTML = "";
         document.getElementById("instructions").innerHTML = "";
         document.getElementById("name-form").value = "";
         document.getElementById("ingredient-form").value = "";
         document.getElementById("instruction-form").value = "";
-        alert("Your recipe has been submitted!");
     }
 </script>
 
