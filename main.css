@@ -89,3 +89,25 @@ h1 {
 .submit-form {
     position: absolute;
 }
+
+/* Grid section */
+.grid {
+    display: grid;
+    grid-template-areas:
+        "nav nav nav"
+        "ing inst inst";
+    grid-template-columns: repeat(3, 1fr);
+}
+
+nav {
+    grid-area: nav;
+}
+
+.ingredients {
+    grid-area: ing;
+    background-color: white;
+}
+
+.instruction {
+    grid-area: inst;
+}
