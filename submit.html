@@ -50,19 +50,20 @@
         <div class="container">
             <div class="row bg-2">
                 <h1 class="text-center">SUBMIT YOUR OWN RECIPE!</h1>
-                <div class="col-sm-12 bg-2">
+                <div class="submit-form">
+                    <h3>Give your recipe a name:</h3>
                     <p id="name"></p>
-                    <input type="text" id="name-form" placeholder="Give your recipe a name">
+                    <input type="text" id="name-form">
                     <button onclick="submitName(event)">Add Name</button>
                 </div>
-            </div>
-            <div class="row bg-2">
-                <div class="col-sm-6 bg-2">
+                <div class="submit-form">
+                    <h3>Add ingredients one at a time:</h3>
                     <p id="ingredients"></p>
                     <input type="text" id="ingredient-form">
                     <button onclick="submitIngredients(event)">Add Ingredient</button>
                 </div>
-                <div class="col-sm-6 bg-2">
+                <div class="submit-form">
+                    <h3>Add instructions one at a time:</h3>
                     <p id="instructions"></p>
                     <input type="text" id="instruction-form">
                     <button onclick="submitInstructions(event)">Add Instruction</button>
@@ -84,6 +85,7 @@
 
     function submitName(event) {
         document.getElementById("name").innerHTML = document.getElementById("name-form").value;
+        document.getElementById("name-form").value = "";
         event.preventDefault();
     }
 
@@ -95,6 +97,7 @@
         }
         inner += "</ul>";
         document.getElementById("ingredients").innerHTML = inner;
+        document.getElementById("ingredient-form").value = "";
         event.preventDefault();
     }
 
@@ -106,6 +109,7 @@
         }
         inner += "</ol>";
         document.getElementById("instructions").innerHTML = inner;
+        document.getElementById("instruction-form").value = "";
         event.preventDefault();
     }
 
