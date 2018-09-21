@@ -3,8 +3,45 @@ body {
     background-color: #FFC107;
 }
 
+p {
+    color: white;
+}
+
+h1 {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
 .container {
     padding: 80px 120px;
+}
+
+.btn-container {
+    padding-top: 10px;
+    padding-right: 120px;
+    padding-bottom: 50px;
+    padding-left: 120px;
+}
+
+.bg-1 {
+    background-color: #FFECB3;
+}
+
+.bg-2 {
+    background-color: #FFC107;
+    padding: 30px;
+}
+
+#home-link {
+    color: white;
+    font-size: larger;
+    background-color: #FF9800;
+    padding: 20px 20px;
+}
+
+.list-group {
+    width: 80%;
+    margin: auto;
 }
 
 .navbar {
@@ -39,4 +76,16 @@ body {
 
 .carousel-caption h3 {
     color: #fff !important;
+}
+
+.btn {
+    margin: 0px;
+    background-color: #FFC107;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.submit-form {
+    position: absolute;
 }
